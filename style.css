@@ -1,6 +1,6 @@
 /* 🌐 VARIABLES */
 :root {
-    --bg: #f4f4f6;
+    --bg: rgba(244, 244, 246, 0.8);
     --white: #ffffff;
     --text: #1a1a1a;
     --primary: #0b1f3a;
@@ -35,8 +35,15 @@
     max-width: none;
   }
   
-  section:nth-of-type(even) {
-    background-color: var(--white);
+  #about, #portfolio, #pricing {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  #services, .testimonial, #contact {
+    background-color: rgba(244, 244, 246, 0.8);
+  }
+
+  header.hero {
+    background: linear-gradient(110deg, #162238 0%, #2a3a55 100%); /* Exemple */
   }
 
   .container {
@@ -84,22 +91,49 @@
   /* NAVBAR FIXE */
   .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 10px var(--shadow);
+    top: 1rem; /* Espace par rapport au haut */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Ajustement précis du centrage */
+    width: calc(100% - 4rem); /* Largeur moins les marges latérales */
+    max-width: 1200px; /* Largeur maximale pour la navbar flottante */
+    background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     z-index: 1000;
+    border-radius: 50px; /* Bords très arrondis */
+    transition: all 0.4s ease-in-out; /* Transition douce */
+    padding: 0.5rem 0; /* Padding vertical réduit */
   }
   
   .nav-container {
-    max-width: 1400px;
+    max-width: 1100px; /* Doit être inférieur à max-width de .navbar */
     margin: 0 auto;
-    padding: 1rem 5vw;
+    padding: 0.5rem 2rem; /* Padding intérieur ajusté */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: padding 0.4s ease-in-out;
   }
+  
+  /* NAVBAR - Styles quand on défile (classe ajoutée par JS) */
+  .navbar.navbar-scrolled {
+    top: 0; /* Colle en haut */
+    left: 0; /* Prend toute la largeur */
+    transform: translateX(0); /* Annule le centrage */
+    width: 100%; /* Prend toute la largeur */
+    max-width: none; /* Annule la largeur max */
+    background: rgba(255, 255, 255, 0.85); /* Fond peut-être moins transparent */
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 10px var(--shadow); /* Ombre classique */
+    border-radius: 0; /* Bords droits */
+    padding: 0; /* Reset padding */
+  }
+  
+  .navbar.navbar-scrolled .nav-container {
+      max-width: 1400px; /* Revient à la largeur max du site */
+      padding: 1rem 5vw; /* Revient au padding standard */
+  }
+  
 
   .logo {
     font-size: 1.5rem;
@@ -127,7 +161,7 @@
   
   /* Décale le contenu à cause de la navbar */
   body {
-    padding-top: 80px;
+    padding-top: 0px;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
   }
@@ -166,39 +200,43 @@
   /* CTA BUTTON */
   .cta-button {
     display: inline-block;
-    position: relative;
-    background: var(--accent);
-    color: var(--white);
+    position: relative; /* Nécessaire pour le pseudo-élément */
+    background: var(--accent); /* Fond initial */
+    color: var(--white); /* Texte initial */
     padding: 1rem 2rem;
     font-size: 1.1rem;
     border: none;
     border-radius: var(--radius);
     text-decoration: none;
-    transition: all var(--transition);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Cache le pseudo-élément qui dépasse */
+    z-index: 1; /* S'assurer que le texte est au-dessus du ::before */
+    transition: color 0.4s ease-out, transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour la couleur du texte */
   }
-
+  
   .cta-button::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    transition: opacity var(--transition);
-    z-index: 2;
-  }
-
-  .cta-button:hover::before {
-    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary); /* Nouvelle couleur de fond au survol */
+    transform: translateX(-100%); /* Commence complètement à gauche, caché */
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1); /* Animation de glissement */
+    z-index: -1; /* Derrière le contenu du bouton */
   }
   
   .cta-button:hover {
-    background: #b45309;
-    transform: translateY(-2px) scale(1.02);
+    color: var(--accent); /* Nouvelle couleur de texte au survol */
+    transform: translateY(-2px) scale(1.02); /* Garder l'effet de mouvement */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    /* Le background direct n'est plus changé ici */
   }
   
+  .cta-button:hover::before {
+    transform: translateX(0); /* Fait glisser le ::before pour couvrir le bouton */
+  }  
   .services-grid {
     display: flex; /* Active Flexbox */
     gap: 2rem;     /* Espace entre les colonnes */
@@ -229,6 +267,16 @@
   
   /* Responsive : Sur petits écrans, les blocs s'empilent */
   @media (max-width: 768px) {
+    .navbar {
+      width: calc(100% - 2rem); /* Ajuster la largeur sur mobile si besoin */
+      top: 0.5rem;
+    }
+    .nav-links {
+      top: 60px; /* Ajuster si la hauteur de la navbar change */
+    }
+    .navbar.navbar-scrolled .nav-links {
+      top: 70px; /* Position quand la navbar est scrollée */
+    }
     .services-grid {
       flex-direction: column; /* Empile les éléments verticalement */
       gap: 1.5rem; /* Ajuste l'espace vertical */
@@ -307,35 +355,73 @@
     color: var(--muted);
   }
   
-  /* CONTACT FORM */
-  .contact-form {
+  /* CONTACT */
+  #contact .container {
+    text-align: center; /* Centre le titre et le bloc de méthodes */
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si pas assez de place */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 1.5rem; /* Espace entre les boutons */
     margin-top: 2rem;
   }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
+
+  .contact-link {
+    display: flex;
+    flex-direction: column; /* Icône au-dessus du texte */
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    min-width: 160px; /* Largeur minimale */
+    min-height: 120px; /* Hauteur minimale */
+    border: 1px solid transparent; /* Bordure transparente au départ */
     border-radius: var(--radius);
-    font-size: 1rem;
-    background: var(--white);
-    transition: border-color var(--transition), box-shadow var(--transition);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all var(--transition);
   }
-  
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(11, 31, 58, 0.1);
-    outline: none;
+
+  .contact-link i { /* Style pour les icônes */
+    font-size: 2.5rem; /* Icônes plus grandes */
+    margin-bottom: 0.5rem;
+    color: var(--accent); /* Couleur accent pour les icônes */
+    transition: all var(--transition);
   }
-  
-  .contact-form button {
-    width: 100%;
-    margin-top: 1rem;
+
+  .contact-link span {
+      text-align: center;
   }
-  
+
+  .contact-link:hover {
+    transform: translateY(-5px) scale(1.03);
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border-color: var(--primary); /* Rendre la bordure visible au survol si souhaité */
+  }
+
+  .contact-link:hover i {
+    color: var(--white); /* Icône blanche au survol */
+    transform: scale(1.1); /* Grossit légèrement l'icône */
+  }
+
+  /* Spécifique WhatsApp pour couleur */
+  .contact-whatsapp:hover {
+      background-color: #25D366; /* Vert WhatsApp */
+      border-color: #25D366;
+      color: white;
+  }
+  .contact-whatsapp:hover i {
+      color: white;
+  }
+    
   /* FOOTER */
   footer {
     text-align: center;

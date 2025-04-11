@@ -15,6 +15,9 @@
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 
 <body>
@@ -97,18 +100,21 @@
 
       <a href="portfolio-elegance.html" class="portfolio-link">
         <div class="portfolio-card">
+          <img src="https://via.placeholder.com/400x250/ddeeff/557799?text=Aperçu+Salon+Elegance" alt="Aperçu site Salon Élégance">
           <p><strong>Salon Élégance – Lyon</strong><br>Galerie photos, prise de rendez-vous, responsive.</p>
         </div>
       </a>
 
       <a href="portfolio-gourmet.html" class="portfolio-link">
         <div class="portfolio-card">
+          <img src="https://via.placeholder.com/400x250/fff0dd/cc8855?text=Aperçu+Le+Gourmet" alt="Aperçu site Restaurant Le Gourmet">
           <p><strong>Restaurant Le Gourmet – Toulouse</strong><br>Menu en ligne, réservation, carte Google.</p>
         </div>
       </a>
 
       <a href="portfolio-lumiere.html" class="portfolio-link">
         <div class="portfolio-card">
+          <img src="https://via.placeholder.com/400x250/eeeeee/777777?text=Aperçu+Studio+Lumiere" alt="Aperçu site Studio Lumière">
           <p><strong>Studio Lumière – Photographe</strong><br>Portfolio, témoignages, formulaire de devis.</p>
         </div>
       </a>
@@ -141,11 +147,20 @@
 
   <!-- Contact -->
   <section id="contact">
-    <div class="container" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p>📧 <a href="mailto:charleskayssieh@gmail.com">charleskayssieh@gmail.com</a></p>
-      <p>📞 <a href="tel:+33766546561">+33 7 66 54 65 61</a></p>
-      <p>💬 <a href="https://wa.me/33766546561" target="_blank">Discuter sur WhatsApp</a></p>
+    <div class="container contact-container" data-aos="fade-up">
+      <h2>Contactez-moi</h2>
+      <p style="margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right:auto;">Prêt à démarrer votre projet ou simplement curieux ? N'hésitez pas !</p>
+      <div class="contact-methods">
+        <a href="mailto:charleskayssieh@gmail.com" class="contact-link">
+          <i class="fa-solid fa-envelope"></i> <span>Email</span>
+        </a>
+        <a href="tel:+33766546561" class="contact-link">
+          <i class="fa-solid fa-phone"></i> <span>Téléphone</span>
+        </a>
+        <a href="https://wa.me/33766546561" target="_blank" rel="noopener noreferrer" class="contact-link contact-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -204,6 +219,19 @@
         }
     });
     </script>
-
+  
+  <!-- Interractive Navbar -->
+  <script>
+    const navbar = document.querySelector('.navbar');
+    const scrollThreshold = 50; // Seuil en pixels avant de changer le style
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > scrollThreshold) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
