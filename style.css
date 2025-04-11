@@ -445,6 +445,106 @@
     opacity: 0.2;
   }
   
+  /* MODAL */
+  .modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 2000; /* Au-dessus de tout */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permet de scroller si contenu long */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .modal.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Marge en % pour s'adapter */
+    padding: 25px 30px;
+    border-radius: var(--radius, 8px);
+    width: 90%;
+    max-width: 800px; /* Largeur max */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    position: relative;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal.active .modal-content {
+      transform: translateY(0);
+   }
+  
+  .modal-close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    /* Positionnement haut-droite (plus standard) */
+    right: 15px;
+    /* Pour haut-gauche (comme demandé mais moins usuel): */
+    /* left: 15px; */
+    /* right: auto; */
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Style du contenu dans la modale */
+  .modal-content h1 { 
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem; /* Taille adaptée pour modale */
+      color: var(--primary);
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.8rem;
+  }
+  .modal-content h2 {
+      font-size: 1.4rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary);
+  }
+  
+  .modal-content p, .modal-content li {
+    font-size: 1rem; /* Taille de texte lisible */
+    line-height: 1.6;
+    color: #444; /* Texte un peu plus foncé */
+    margin-bottom: 1rem;
+  }
+  .modal-content strong {
+       color: #111;
+       font-weight: 600;
+  }
+  .modal-content a {
+      color: var(--accent); /* Utiliser la couleur accent pour les liens */
+      text-decoration: underline;
+  }
+  .modal-content a:hover {
+      color: var(--primary);
+   }
+
+  .loading-indicator {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-style: italic;
+    color: var(--muted, #888);
+  }
+
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .hero h1 {

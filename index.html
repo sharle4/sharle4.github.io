@@ -136,10 +136,10 @@
     <div class="container" data-aos="fade-up">
       <h2>Des tarifs clairs, un résultat qui rapporte</h2>
       <p>Une solution abordable et pro pour lancer ou moderniser votre présence en ligne. Pas de surprises, tout est inclus.</p>
-      <div> <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>🚀 Site vitrine sur mesure :</strong> à partir de <strong>300 € TTC</strong></p>
+      <div> <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>🚀 Site vitrine sur mesure :</strong> à partir de <strong>300 € </strong>(TVA non applicable)</p>
         <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">(Inclut design personnalisé, développement, responsive, optimisation SEO local)</p>
 
-        <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>🧘 Hébergement & Maintenance :</strong> <strong>20 € TTC / mois</strong></p>
+        <p style="font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>🧘 Hébergement & Maintenance :</strong> <strong>20 € / mois </strong>(TVA non applicable)</p>
         <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">(Inclut hébergement rapide et sécurisé, noms de domaine personnalisé, sauvegardes, mises à jour techniques, assistance)</p>
       </div>
       <ul class="badges">
@@ -176,10 +176,35 @@
   <!-- Footer -->
   <footer>
     <p>&copy; <span id="year">2025</span> Charles Kayssieh - Création de site web pour TPE & Indépendants - Palaiseau</p>
-    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>  </footer>
+    <p>
+      <a href="legal.html" id="open-legal-popup" data-content-url="legal.html">Mentions légales</a> |
+      <a href="privacy.html" id="open-privacy-popup" data-content-url="policy.html">Politique de confidentialité</a>
+    </p> 
+  </footer>
 
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <!-- Popup Mentions légales -->
+  <div class="modal" id="legal-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="close-legal-popup">&times;</span>
+      <div class="modal-body">
+        <p class="loading-indicator">Chargement...</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="privacy-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="close-privacy-popup">&times;</span>
+      <div class="modal-body">
+        <p class="loading-indicator">Chargement...</p>
+      </div>
+    </div>
+  </div>
+    
+
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
@@ -243,5 +268,136 @@
       }
     });
   </script>
+
+  <!-- Popup Mentions légales -->
+  <script>
+    // --- Script pour les Modales Légales avec Chargement Dynamique ---
+    document.addEventListener('DOMContentLoaded', () => { // Attend que le DOM soit prêt
+
+      // Sélection des éléments Modales et Boutons de fermeture
+      const legalModal = document.getElementById('legal-modal');
+      const privacyModal = document.getElementById('privacy-modal');
+      const closeLegalBtn = document.getElementById('close-legal-popup');
+      const closePrivacyBtn = document.getElementById('close-privacy-popup');
+
+      // Sélection des liens d'ouverture
+      const openLegalLink = document.getElementById('open-legal-popup');
+      const openPrivacyLink = document.getElementById('open-privacy-popup');
+
+      // Conteneurs pour le contenu chargé
+      const legalModalBody = legalModal ? legalModal.querySelector('.modal-body') : null;
+      const privacyModalBody = privacyModal ? privacyModal.querySelector('.modal-body') : null;
+
+      // États pour savoir si le contenu a été chargé (évite re-fetch)
+      let legalContentLoaded = false;
+      let privacyContentLoaded = false;
+
+      // Fonction pour charger le contenu via Fetch
+      async function loadModalContent(modalBody, url) {
+          if (!modalBody) return false; // Sécurité
+
+          // Afficher indicateur de chargement (même si déjà affiché initialement)
+          modalBody.innerHTML = '<p class="loading-indicator">Chargement...</p>';
+
+          try {
+              const response = await fetch(url);
+              if (!response.ok) {
+                  // Gérer les erreurs HTTP (ex: 404 Fichier non trouvé)
+                  throw new Error(`Erreur HTTP ${response.status} lors du chargement de ${url}`);
+              }
+              const content = await response.text();
+              modalBody.innerHTML = content; // Injecter le contenu HTML
+              return true; // Succès
+          } catch (error) {
+              console.error("Erreur lors du chargement du contenu de la modale:", error);
+              modalBody.innerHTML = `<p class="loading-indicator" style="color: red;">Impossible de charger le contenu. Veuillez réessayer plus tard.</p><p style="font-size:0.8em; color:#666;">Détail: ${error.message}</p>`;
+              return false; // Échec
+          }
+      }
+
+      // Fonction pour ouvrir une modale
+      async function openModal(modal, modalBody, contentUrl, contentLoadedFlag) {
+        if (!modal || !modalBody) return;
+
+          // Charger le contenu seulement si pas déjà chargé
+          if (!contentLoadedFlag) {
+              const success = await loadModalContent(modalBody, contentUrl);
+              if (success) {
+                  // Mettre à jour le flag correspondant pour éviter de recharger
+                  if (modal.id === 'legal-modal') legalContentLoaded = true;
+                  if (modal.id === 'privacy-modal') privacyContentLoaded = true;
+              } else {
+                // Option: Ne pas ouvrir la modale si le contenu n'a pu être chargé ?
+                // Ici, on l'ouvre quand même pour afficher le message d'erreur.
+              }
+          }
+
+        // Ouvrir la modale (visuellement)
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Bloquer le scroll du body
+      }
+
+      // Fonction pour fermer une modale (inchangée)
+      function closeModal(modal) {
+        if (modal && modal.classList.contains('active')) { // Vérifier si la modale est active
+          modal.classList.remove('active');
+          document.body.style.overflow = ''; // Rétablir le scroll du body
+        }
+      }
+
+      // --- Écouteurs d'événements ---
+
+      // Ouverture Mentions Légales
+      if (openLegalLink && legalModal && legalModalBody) {
+          openLegalLink.addEventListener('click', (e) => {
+              e.preventDefault(); // Empêche de suivre le href="legal.html"
+              const url = openLegalLink.getAttribute('data-content-url');
+              if (url) {
+                  openModal(legalModal, legalModalBody, url, legalContentLoaded);
+              } else {
+                  console.error("URL de contenu manquante pour les mentions légales.");
+              }
+          });
+      }
+
+      // Ouverture Politique de Confidentialité
+      if (openPrivacyLink && privacyModal && privacyModalBody) {
+          openPrivacyLink.addEventListener('click', (e) => {
+              e.preventDefault(); // Empêche de suivre le href="privacy.html"
+              const url = openPrivacyLink.getAttribute('data-content-url');
+              if (url) {
+                  openModal(privacyModal, privacyModalBody, url, privacyContentLoaded);
+              } else {
+                  console.error("URL de contenu manquante pour la politique de confidentialité.");
+              }
+          });
+      }
+
+      // Fermeture avec le bouton croix
+      if (closeLegalBtn) {
+        closeLegalBtn.addEventListener('click', () => closeModal(legalModal));
+      }
+      if (closePrivacyBtn) {
+        closePrivacyBtn.addEventListener('click', () => closeModal(privacyModal));
+      }
+
+      // Fermeture en cliquant en dehors de la modale
+      window.addEventListener('click', (event) => {
+        if (event.target === legalModal) closeModal(legalModal);
+        if (event.target === privacyModal) closeModal(privacyModal);
+      });
+
+      // Fermeture avec la touche Échap
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeModal(legalModal); // Tente de fermer les deux
+          closeModal(privacyModal);
+        }
+      });
+
+    }); // Fin de DOMContentLoaded
+    // --- Fin du Script Modales ---
+  </script>
+  
 </body>
 </html>
