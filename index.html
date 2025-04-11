@@ -3,61 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charles Kayssieh - Accueil</title>
+  <title>Charles.dev – Développeur Web Freelance</title>
+  <meta name="description" content="Création de sites vitrines modernes pour commerçants et artisans. Design premium, responsive, SEO local, hébergement et maintenance." />
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS (animations au scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
+    <div id="tsparticles"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Charles.dev</a>
+  
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Réalisations</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
   <header class="hero">
-    <div class="hero-content">
-      <h1>Votre présence en ligne, sans complication</h1>
-      <p>Je conçois des sites web vitrines sur mesure pour booster la visibilité de votre entreprise.</p>
-      <a href="#contact" class="cta-button">Discutons de votre projet</a>
+    <div class="container">
+      <h1 data-aos="fade-down">Création de sites web professionnels</h1>
+      <p data-aos="fade-up">Pour commerçants, artisans et indépendants — une présence en ligne à votre image, optimisée et élégante.</p>
+      <a href="#contact" class="cta-button" data-aos="zoom-in">Demandez un devis</a>
+    </div>
+
+    <!-- Parallax déco -->
+    <div class="parallax" data-rellax-speed="-3" style="position: absolute; top: 0; right: 0;">
+      <img src="https://via.placeholder.com/300x300?text=Décor" alt="Décor" />
     </div>
   </header>
 
-  <!-- Services Section -->
-  <section class="services">
-    <h2>Mes services</h2>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Création de site vitrine</h3>
-        <p>Un site sobre, moderne et adapté à vos besoins spécifiques.</p>
-      </div>
-      <div class="service">
-        <h3>Hébergement & Maintenance</h3>
-        <p>Je m’occupe de tout pour que votre site reste en ligne sans souci.</p>
-      </div>
-      <div class="service">
-        <h3>SEO & Mobile</h3>
-        <p>Optimisé pour le référencement et totalement responsive.</p>
-      </div>
+  <!-- À propos -->
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <h2>À propos</h2>
+      <p>Je m'appelle Charles, développeur web freelance basé à Palaiseau. J’aide les commerçants et artisans à créer une vitrine en ligne élégante, rapide et facile à gérer.</p>
+      <ul class="badges">
+        <li>💼 Micro-entrepreneur enregistré</li>
+        <li>⚡ Délai rapide (3 à 5 jours)</li>
+        <li>🔄 Révisions incluses</li>
+        <li>📱 Responsive & SEO</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section class="process">
-    <h2>Comment ça se passe ?</h2>
-    <ol class="steps">
-      <li><strong>1. Échange :</strong> Compréhension de vos besoins</li>
-      <li><strong>2. Conception :</strong> Création du site</li>
-      <li><strong>3. Mise en ligne :</strong> Hébergement et support</li>
-    </ol>
+  <!-- Services -->
+  <section id="services">
+    <div class="container" data-aos="fade-up">
+      <h2>Services</h2>
+      <h3>Création de site vitrine</h3>
+      <ul>
+        <li>Design personnalisé, moderne et mobile</li>
+        <li>Optimisation SEO local</li>
+        <li>Formulaires, réseaux sociaux, Google Maps</li>
+      </ul>
+      <h3>Hébergement & Maintenance</h3>
+      <ul>
+        <li>Hébergement français sécurisé</li>
+        <li>Sauvegardes automatiques</li>
+        <li>Assistance technique</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-form-section">
-    <div class="contact-form">
+  <!-- Réalisations -->
+  <section id="portfolio">
+    <div class="container" data-aos="fade-up">
+      <h2>Réalisations</h2>
+      <p><strong>Salon Élégance – Lyon</strong><br>Galerie photos, prise de rendez-vous, responsive.</p>
+      <p><strong>Restaurant Le Gourmet – Toulouse</strong><br>Menu en ligne, réservation, carte Google.</p>
+      <p><strong>Studio Lumière – Photographe</strong><br>Portfolio, témoignages, formulaire de devis.</p>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="testimonial">
+    <div class="container" data-aos="fade-up">
+      <h2>Témoignages</h2>
+      <blockquote>"Le site est clair, rapide et correspond parfaitement à mon activité. Merci pour ta réactivité !"<br><cite>— Sophie, coiffeuse à Lyon</cite></blockquote>
+      <blockquote>"J’ai adoré la simplicité du processus et le résultat est au-delà de mes attentes."<br><cite>— Paul, restaurateur à Toulouse</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="pricing">
+    <div class="container" data-aos="fade-up">
+      <h2>Tarifs</h2>
+      <p><strong>Site vitrine personnalisé</strong> : à partir de <strong>200 € HT</strong></p>
+      <p><strong>Hébergement + maintenance</strong> : 20 €/mois</p>
+      <p>🔐 Paiement sécurisé – 🔄 Révisions incluses – ⏱ Délai moyen : 1 à 4 jours</p>
+      <a href="#contact" class="cta-button">📩 Demandez votre devis</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container" data-aos="fade-up">
       <h2>Contact</h2>
-      <p><strong>Email :</strong> <a href="mailto:charleskayssieh@gmail.com">charleskayssieh@gmail.com</a></p>
-      <p><strong>Téléphone :</strong> <a href="tel:+33766546561">+33 7 66 54 65 61</a></p>
+      <p>📧 <a href="mailto:charleskayssieh@gmail.com">charleskayssieh@gmail.com</a></p>
+      <p>📞 <a href="tel:+33766546561">+33 7 66 54 65 61</a></p>
+      <p>💬 <a href="https://wa.me/33766546561" target="_blank">Discuter sur WhatsApp</a></p>
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Charles Kayssieh - Tous droits réservés</p>
+    <p>&copy; 2025 Charles Kayssieh - Développeur web freelance</p>
+    <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
   </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Rellax -->
+  <script src="https://unpkg.com/rellax/rellax.min.js"></script>
+  <script>var rellax = new Rellax('.parallax');</script>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+  
+    burger.onclick = () => {
+      navLinks.classList.toggle('active');
+      burger.classList.toggle('open');
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script>
+    tsParticles.load("tsparticles", {
+        fullScreen: {
+        enable: true,
+        zIndex: -1
+        },
+        background: {
+        color: "#f4f4f6"
+        },
+        particles: {
+        number: { value: 60 },
+        color: { value: "#0b1f3a" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 2 },
+        move: {
+            enable: true,
+            speed: 0.5,
+            direction: "none",
+            outModes: "out"
+        }
+        },
+        interactivity: {
+        events: { onHover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 100 } }
+        }
+    });
+    </script>
 </body>
 </html>
