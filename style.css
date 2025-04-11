@@ -105,14 +105,14 @@ body {
 }
 
 /* Contact Call To Action */
-.contact-cta {
+.contact {
   padding: 80px 20px;
   text-align: center;
   background-color: #003f6b;
   color: white;
 }
 
-.contact-cta h2 {
+.contact h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
