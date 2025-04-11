@@ -31,6 +31,7 @@
       </div>
   
       <ul class="nav-links" id="nav-links">
+        <li><a href="#about">À propos</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Réalisations</a></li>
         <li><a href="#pricing">Tarifs</a></li>
@@ -49,7 +50,7 @@
 
     <!-- Parallax déco -->
     <div class="parallax" data-rellax-speed="-3" style="position: absolute; top: 0; right: 0;">
-      <img src="https://via.placeholder.com/300x300?text=Décor" alt="Décor" />
+      <!-- <img src="https://via.placeholder.com/300x300?text=Décor" alt="Décor" /> -->
     </div>
   </header>
 
@@ -60,7 +61,7 @@
       <p>Je m'appelle Charles, développeur web freelance basé à Palaiseau. J’aide les commerçants et artisans à créer une vitrine en ligne élégante, rapide et facile à gérer.</p>
       <ul class="badges">
         <li>💼 Micro-entrepreneur enregistré</li>
-        <li>⚡ Délai rapide (3 à 5 jours)</li>
+        <li>⚡ Délai rapide (1 à 4 jours)</li>
         <li>🔄 Révisions incluses</li>
         <li>📱 Responsive & SEO</li>
       </ul>
@@ -71,18 +72,21 @@
   <section id="services">
     <div class="container" data-aos="fade-up">
       <h2>Services</h2>
-      <h3>Création de site vitrine</h3>
-      <ul>
-        <li>Design personnalisé, moderne et mobile</li>
-        <li>Optimisation SEO local</li>
-        <li>Formulaires, réseaux sociaux, Google Maps</li>
-      </ul>
-      <h3>Hébergement & Maintenance</h3>
-      <ul>
-        <li>Hébergement français sécurisé</li>
-        <li>Sauvegardes automatiques</li>
-        <li>Assistance technique</li>
-      </ul>
+      <div class="services-grid"> <div class="service-item"> <h3>Création de site vitrine</h3>
+          <ul>
+            <li>Design personnalisé, moderne et mobile</li>
+            <li>Optimisation SEO local</li>
+            <li>Formulaires, réseaux sociaux, Google Maps</li>
+          </ul>
+        </div>
+        <div class="service-item"> <h3>Hébergement & Maintenance</h3>
+          <ul>
+            <li>Hébergement français sécurisé</li>
+            <li>Sauvegardes automatiques</li>
+            <li>Assistance technique</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -90,15 +94,24 @@
   <section id="portfolio">
     <div class="container" data-aos="fade-up">
       <h2>Réalisations</h2>
-      <div class="portfolio-card">
-        <p><strong>Salon Élégance – Lyon</strong><br>Galerie photos, prise de rendez-vous, responsive.</p>
-      </div>
-      <div class="portfolio-card">
-        <p><strong>Restaurant Le Gourmet – Toulouse</strong><br>Menu en ligne, réservation, carte Google.</p>
-      </div>
-      <div class="portfolio-card">
-        <p><strong>Studio Lumière – Photographe</strong><br>Portfolio, témoignages, formulaire de devis.</p>
-      </div>
+
+      <a href="portfolio-elegance.html" class="portfolio-link">
+        <div class="portfolio-card">
+          <p><strong>Salon Élégance – Lyon</strong><br>Galerie photos, prise de rendez-vous, responsive.</p>
+        </div>
+      </a>
+
+      <a href="portfolio-gourmet.html" class="portfolio-link">
+        <div class="portfolio-card">
+          <p><strong>Restaurant Le Gourmet – Toulouse</strong><br>Menu en ligne, réservation, carte Google.</p>
+        </div>
+      </a>
+
+      <a href="portfolio-lumiere.html" class="portfolio-link">
+        <div class="portfolio-card">
+          <p><strong>Studio Lumière – Photographe</strong><br>Portfolio, témoignages, formulaire de devis.</p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -115,9 +128,13 @@
   <section id="pricing">
     <div class="container" data-aos="fade-up">
       <h2>Tarifs</h2>
-      <p><strong>Site vitrine personnalisé</strong> : à partir de <strong>200 € HT</strong></p>
+      <p><strong>Site vitrine personnalisé</strong> : à partir de <strong>200 € TTC</strong></p>
       <p><strong>Hébergement + maintenance</strong> : 20 €/mois</p>
-      <p>🔐 Paiement sécurisé – 🔄 Révisions incluses – ⏱ Délai moyen : 1 à 4 jours</p>
+      <ul class="badges">
+        <li>🔐 Paiement sécurisé</li>
+        <li>⚡ Délai rapide (1 à 4 jours)</li>
+        <li>🔄 Révisions incluses</li>
+      </ul>
       <a href="#contact" class="cta-button">📩 Demandez votre devis</a>
     </div>
   </section>
@@ -146,6 +163,7 @@
   <script src="https://unpkg.com/rellax/rellax.min.js"></script>
   <script>var rellax = new Rellax('.parallax');</script>
 
+  <!-- Burger menu -->
   <script>
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('nav-links');
