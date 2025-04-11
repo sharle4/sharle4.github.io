@@ -357,14 +357,10 @@
   }
   
   /* CONTACT */
-  #contact .container {
-    text-align: center; /* Centre le titre et le bloc de méthodes */
-  }
 
   .contact-methods {
     display: flex;
     flex-wrap: wrap; /* Permet de passer à la ligne si pas assez de place */
-    justify-content: center; /* Centre les éléments horizontalement */
     gap: 1.5rem; /* Espace entre les boutons */
     margin-top: 2rem;
   }
