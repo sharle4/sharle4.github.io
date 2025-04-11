@@ -518,6 +518,7 @@
       margin-top: 1.8rem;
       margin-bottom: 0.8rem;
       color: var(--primary);
+      opacity: 1;
   }
   
   .modal-content p, .modal-content li {
