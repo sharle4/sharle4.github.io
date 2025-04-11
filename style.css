@@ -36,10 +36,10 @@
   }
   
   #about, #portfolio, #pricing {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.6);
   }
   #services, .testimonial, #contact {
-    background-color: rgba(244, 244, 246, 0.8);
+    background-color: rgba(244, 244, 246, 0.6);
   }
 
   header.hero {
