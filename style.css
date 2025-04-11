@@ -57,6 +57,13 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  [data-aos].aos-animate h2 {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   h3 {
@@ -89,7 +96,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -117,6 +124,14 @@
   /* Décale le contenu à cause de la navbar */
   body {
     padding-top: 80px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
   
   /* HERO SECTION */
@@ -147,6 +162,7 @@
   /* CTA BUTTON */
   .cta-button {
     display: inline-block;
+    position: relative;
     background: var(--accent);
     color: var(--white);
     padding: 1rem 2rem;
@@ -157,10 +173,26 @@
     transition: all var(--transition);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: 2;
+  }
+
+  .cta-button:hover::before {
+    opacity: 1;
+  }
   
   .cta-button:hover {
     background: #b45309;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   }
   
   /* BADGES */
@@ -179,8 +211,32 @@
     font-weight: 500;
     color: var(--primary);
     font-size: 1rem;
+    transition: all var(--transition);
+    cursor: default ;
+  }
+
+  .badges li:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
   }
   
+  /*PORTFOLIO CARD*/
+  .portfolio-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px var(--shadow);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+
   /* TESTIMONIALS */
   .testimonial blockquote {
     font-style: italic;
