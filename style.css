@@ -145,6 +145,7 @@
   .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2rem;
   }
   
@@ -549,8 +550,9 @@
     }
 
     .navbar:not(.navbar-scrolled) .nav-links.active {
-      border-radius: 0 0 30px 30px;
+      border-radius: 30px;
       overflow: hidden;
+      top: calc(70px + 10px)
     }
 
     .navbar.navbar-scrolled .nav-links.active {
