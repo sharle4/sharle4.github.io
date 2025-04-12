@@ -426,6 +426,59 @@
     transform: scale(1.05);
   }
   
+  /* ABOUT */
+  .about-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-image {
+    flex: 0 0 20%;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      align-items: center
+    }
+    
+    .about-image {
+      max-width: 150px;
+      margin-bottom: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-image img {
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      object-position: center top;
+    }
+
+    #pricing .cta-button {
+      display: block;      /* Change l'affichage en bloc */
+      margin-left: auto;   /* Marge gauche automatique */
+      margin-right: auto;  /* Marge droite automatique */
+      margin-top: 1rem;   /* Espace au-dessus du bouton */
+    }
+  }
+
+
   /*PORTFOLIO CARD*/
   .portfolio-link {
     text-decoration: none; /* Supprime le soulignement du lien */
@@ -723,5 +776,37 @@
     .cta-button {
       font-size: 1rem;
       padding: 0.8rem 1.5rem;
+      
+    }
+
+    .contact-methods {
+      display: flex; /* Garder flex */
+      flex-wrap: wrap; /* Permettre le retour à la ligne */
+      justify-content: center; /* Centrer les éléments horizontalement */
+      gap: 1rem; /* Espacement entre les éléments */
+    }
+  
+    .contact-link {
+       /* Optionnel: Ajuster la taille minimale si besoin sur mobile */
+       /* min-width: 140px; */
+       /* padding: 1.2rem; */
+    }
+  
+    /* Cible le premier lien (Email) */
+    .contact-link:nth-child(1) {
+      width: 100%; /* Prend toute la largeur disponible */
+      /* Ou flex-basis: 100%; */
+      margin-bottom: 1rem; /* Espace avant la ligne suivante */
+      order: 1; /* Assure qu'il est le premier élément (ordre par défaut) */
+    }
+  
+    /* Cible le deuxième (Tel) et troisième (WhatsApp) lien */
+    .contact-link:nth-child(2),
+    .contact-link:nth-child(3) {
+      flex-grow: 1; /* Permet aux éléments de grandir pour remplir l'espace */
+      /* Définit une base de largeur pour qu'ils tiennent à deux côte à côte */
+      /* 50% moins la moitié de l'espacement (gap: 1rem / 2 = 0.5rem) */
+      flex-basis: calc(50% - 0.5rem);
+      order: 2; /* Assure qu'ils viennent après le premier */
     }
   }
