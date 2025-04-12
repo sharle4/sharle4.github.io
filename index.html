@@ -22,29 +22,32 @@
 
 <body>
     <div id="tsparticles"></div>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">Charles.dev</a>
-  
-      <div class="burger" id="burger">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+        <a href="#" class="logo">Charles.dev</a>
+      
+      <button class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
-      </div>
-  
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Réalisations</a></li>
-        <li><a href="#pricing">Tarifs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      </button>
+      
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">À propos</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Réalisations</a></li>
+          <li><a href="#pricing" class="nav-link">Tarifs</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <div class="active-indicator"></div>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero" id="hero">
     <div class="container">
       <h1 data-aos="fade-down">Offrez à votre activité une vitrine web <em>exceptionnelle</em></h1>
       <p data-aos="fade-up">Je crée des sites modernes, rapides et efficaces pour les commerçants, artisans et indépendants de <strong>Palaiseau et alentours</strong>. Valorisez votre savoir-faire, attirez plus de clients.</p>    </div>
@@ -232,16 +235,6 @@
   <script src="https://unpkg.com/rellax/rellax.min.js"></script>
   <script>var rellax = new Rellax('.parallax');</script>
 
-  <!-- Burger menu -->
-  <script>
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-  
-    burger.onclick = () => {
-      navLinks.classList.toggle('active');
-      burger.classList.toggle('open');
-    };
-  </script>
 
   <!-- Particules -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
@@ -274,19 +267,6 @@
     });
     </script>
   
-  <!-- Interractive Navbar -->
-  <script>
-    const navbar = document.querySelector('.navbar');
-    const scrollThreshold = 50; // Seuil en pixels avant de changer le style
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > scrollThreshold) {
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.remove('navbar-scrolled');
-      }
-    });
-  </script>
 
   <!-- Popup Mentions légales -->
   <script>

@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const sectionId = section.getAttribute('id');
       
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        if (sectionId === 'accueil') {
+        if (sectionId === 'hero') {
           inAccueilSection = true;
           // Clear all active states when in accueil
           navLinks.forEach(link => link.classList.remove('active'));

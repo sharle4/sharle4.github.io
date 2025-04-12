@@ -56,8 +56,8 @@ body.menu-open {
   border-radius: 0;
   width: 100%;
   max-width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 0.6rem 2rem;
@@ -162,8 +162,8 @@ body.menu-open {
     right: -50%;
     width: 50%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(10px);
     padding: 80px 40px 40px;
     z-index: 1000;
