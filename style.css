@@ -110,10 +110,10 @@
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--bg);
+  background-color: var(--white);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 50px;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,11 +128,11 @@
   border-radius: 0;
   width: 100%;
   max-width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.6rem 2rem;
+  padding: 0.8rem 20rem;
 }
 
 /* Logo Styles */
@@ -154,11 +154,13 @@
   display: flex;
   list-style: none;
   position: relative;
+
 }
 
 .nav-links li {
   margin-left: 2rem;
   position: relative;
+  margin-bottom: 0;
 }
 
 .nav-link {
@@ -224,6 +226,14 @@
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
+  .header .container{
+    padding: 0.8rem 2rem;
+  }
+
+  .header.scrolled .container {
+    padding: 0.8rem 2rem;
+  }
+
   .hamburger {
     display: block;
   }
@@ -234,16 +244,18 @@
     right: -50%;
     width: 50%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(10px);
     padding: 80px 40px 40px;
     z-index: 1000;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     transition: 0.5s ease-in-out;
+    visibility: hidden;
   }
   
   .nav-menu.active {
+    visibility: visible;
     right: 0;
   }
   
@@ -258,7 +270,7 @@
   
   .nav-link {
     font-size: 1.2rem;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.2rem 0.7rem 0.8rem;
     border-radius: 25px;
     transition: var(--transition-h);
   }
@@ -550,20 +562,20 @@
   footer {
     text-align: center;
     font-size: 0.9rem;
-    color: var(--muted);
+    color: var(--text);
     padding: 2rem 5vw;
     border-top: 1px solid #ddd;
     background: var(--white);
   }
   
   footer a {
-    color: var(--muted);
+    color: var(--text);
     text-decoration: none;
     margin: 0 0.5rem;
   }
   
   footer a:hover {
-    color: var(--primary);
+    color: var(--accent);
   }
   
   /* PARALLAX */
