@@ -9,6 +9,7 @@
     --shadow: rgba(0, 0, 0, 0.06);
     --radius: 8px;
     --transition: 0.3s ease;
+    --transition-h: all 0.3s ease-in-out;
   }
   
   /* 🧹 RESET */
@@ -26,6 +27,10 @@
     font-size: 17px;
     line-height: 1.7;
     letter-spacing: 0.2px;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
   }
   
   /* CONTAINERS */
