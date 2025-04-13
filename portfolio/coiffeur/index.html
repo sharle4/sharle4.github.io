@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Élégance - Coiffeur à Gif-sur-Yvette</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Salon Élégance</a>
+                <button class="mobile-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#team">Équipe</a></li>
+                        <li><a href="#appointment">Rendez-vous</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Votre beauté mérite le meilleur</h1>
+                        <p>Un salon de coiffure unique à Gif-sur-Yvette où expertise et créativité s'unissent pour sublimer votre style.</p>
+                        <a href="#appointment" class="btn">Prendre rendez-vous</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1580618864180-f6d7d39b8ff6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>L'excellence capillaire</h1>
+                        <p>Nos coiffeurs experts vous accompagnent pour révéler votre plus belle version avec des soins personnalisés.</p>
+                        <a href="#services" class="btn">Découvrir nos services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Un moment pour vous</h1>
+                        <p>Profitez d'une expérience relaxante dans un cadre élégant et chaleureux, conçu pour votre bien-être.</p>
+                        <a href="#gallery" class="btn">Voir notre galerie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slider-nav-item active"></div>
+            <div class="slider-nav-item"></div>
+            <div class="slider-nav-item"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2>Nos Prestations</h2>
+                <p>Des services de qualité adaptés à tous les styles et toutes les envies</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coupe femme">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Coupe Femme</h3>
+                        <div class="service-price">À partir de 45€</div>
+                        <p>Coupe personnalisée avec diagnostic, shampoing, soin et coiffage.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coupe homme">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Coupe Homme</h3>
+                        <div class="service-price">À partir de 28€</div>
+                        <p>Coupe tendance avec shampoing, massage du cuir chevelu et coiffage.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1596735858461-275b667eaa65?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coloration">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Coloration</h3>
+                        <div class="service-price">À partir de 65€</div>
+                        <p>Coloration professionnelle avec diagnostic et soin protecteur.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Balayage">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Balayage</h3>
+                        <div class="service-price">À partir de 85€</div>
+                        <p>Technique de coloration naturelle pour un effet soleil toute l'année.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chignon">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Coiffure de Mariage</h3>
+                        <div class="service-price">À partir de 95€</div>
+                        <p>Coiffure d'exception pour votre jour spécial avec essai préalable.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1582095128060-e9ca8130cc6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Soin">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Soins Profonds</h3>
+                        <div class="service-price">À partir de 35€</div>
+                        <p>Traitement intensif pour réparer et nourrir vos cheveux en profondeur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="text-center">
+                <h2>Notre Galerie</h2>
+                <p>Découvrez nos plus belles réalisations</p>
+            </div>
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-filter="all">Tous</button>
+                <button class="gallery-tab" data-filter="coupe">Coupes</button>
+                <button class="gallery-tab" data-filter="couleur">Couleurs</button>
+                <button class="gallery-tab" data-filter="coiffure">Coiffures</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="couleur">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Balayage blond">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coupe">
+                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coupe courte femme">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coiffure">
+                    <img src="https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chignon de mariage">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="couleur">
+                    <img src="https://images.unsplash.com/photo-1562310503-a33c1b56c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coloration rousse">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coupe">
+                    <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coupe homme">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="coiffure">
+                    <img src="https://images.unsplash.com/photo-1498842812179-7d736ca1c6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coiffure événement">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2>Notre Équipe</h2>
+                <p>Des professionnels passionnés par leur métier et à votre écoute</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sophie Martin">
+                    </div>
+                    <h3 class="team-name">Sophie Martin</h3>
+                    <div class="team-title">Fondatrice & Styliste Senior</div>
+                    <p>Experte en couleurs avec 15 ans d'expérience dans les plus grands salons parisiens.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Thomas Durand">
+                    </div>
+                    <h3 class="team-name">Thomas Durand</h3>
+                    <div class="team-title">Coiffeur-Visagiste</div>
+                    <p>Spécialiste des coupes hommes modernes et des barbes impeccables.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Julie Berger">
+                    </div>
+                    <h3 class="team-name">Julie Berger</h3>
+                    <div class="team-title">Coloriste</div>
+                    <p>Créatrice de nuances sur-mesure et passionnée par les techniques innovantes.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Marc Leroy">
+                    </div>
+                    <h3 class="team-name">Marc Leroy</h3>
+                    <div class="team-title">Styliste</div>
+                    <p>Expert en coiffures événementielles et en transformations audacieuses.</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment" id="appointment">
+        <div class="container">
+            <div class="text-center">
+                <h2>Prendre Rendez-vous</h2>
+                <p>Réservez votre moment de beauté en quelques clics</p>
+            </div>
+            <div class="appointment-form">
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" placeholder="Votre nom et prénom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" placeholder="Votre numéro de téléphone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Votre adresse email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service souhaité</label>
+                            <select id="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="coupe-femme">Coupe Femme</option>
+                                <option value="coupe-homme">Coupe Homme</option>
+                                <option value="coloration">Coloration</option>
+                                <option value="balayage">Balayage</option>
+                                <option value="mariage">Coiffure de Mariage</option>
+                                <option value="soin">Soins Profonds</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date souhaitée</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Heure souhaitée</label>
+                            <select id="time" required>
+                                <option value="">Sélectionnez une heure</option>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (optionnel)</label>
+                        <textarea id="message" placeholder="Précisions sur votre demande, vos attentes..."></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn appointment-btn">Confirmer le rendez-vous</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2>Avis Clients</h2>
+                <p>Ce que pensent nos clients de nos services</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Témoignage client">
+                    </div>
+                    <div class="testimonial-text">
+                        Je fréquente le salon depuis son ouverture et je n'ai jamais été déçue. Sophie comprend parfaitement mes cheveux et me conseille toujours des styles qui me correspondent parfaitement.
+                    </div>
+                    <div class="testimonial-name">Émilie Dubois</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Témoignage client">
+                    </div>
+                    <div class="testimonial-text">
+                        Thomas a complètement transformé mon look avec une coupe audacieuse mais qui me correspond totalement. L'accueil est chaleureux et on se sent vraiment pris en charge de A à Z.
+                    </div>
+                    <div class="testimonial-name">Nicolas Moreau</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Témoignage client">
+                    </div>
+                    <div class="testimonial-text">
+                        Pour mon mariage, Julie a créé une coiffure qui correspondait parfaitement à ma robe et à mon style. Les essais préalables m'ont rassurée et le jour J, tout était parfait !
+                    </div>
+                    <div class="testimonial-name">Clara Rodriguez</div>
+                </div>
+                <div class="testimonial-buttons">
+                    <button class="testimonial-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="testimonial-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2>Nous Contacter</h2>
+                <p>N'hésitez pas à nous contacter pour toute question</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Adresse</h4>
+                            <p>15 Rue de la Coiffure<br>91190 Gif-sur-Yvette</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Téléphone</h4>
+                            <p>01 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>contact@salonelegance.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Horaires d'ouverture</h4>
+                            <p>
+                                Mardi - Vendredi: 9h - 19h<br>
+                                Samedi: 9h - 18h<br>
+                                Dimanche & Lundi: Fermé
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21027.465675373095!2d2.1209451269775386!3d48.700599000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67f6c58c358df%3A0xbfa90f9487b49aa4!2sGif-sur-Yvette!5e0!3m2!1sfr!2sfr!4v1618560901599!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Salon Élégance</a>
+                    <p>Un salon de coiffure unique à Gif-sur-Yvette où expertise et créativité s'unissent pour sublimer votre style.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Liens rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#team">Équipe</a></li>
+                        <li><a href="#appointment">Rendez-vous</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours-container">
+                    <h4 class="footer-title">Horaires d'ouverture</h4>
+                    <div class="footer-hours">
+                        <span>Mardi - Vendredi:</span>
+                        <span>9h - 19h</span>
+                    </div>
+                    <div class="footer-hours">
+                        <span>Samedi:</span>
+                        <span>9h - 18h</span>
+                    </div>
+                    <div class="footer-hours">
+                        <span>Dimanche:</span>
+                        <span>Fermé</span>
+                    </div>
+                    <div class="footer-hours">
+                        <span>Lundi:</span>
+                        <span>Fermé</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Salon Élégance. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
