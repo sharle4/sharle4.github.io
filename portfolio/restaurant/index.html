@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastBurger Massy - Une expérience culinaire unique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="loader-container">
+        <div class="loader">
+            <div class="burger">
+                <div class="bun-top"></div>
+                <div class="lettuce"></div>
+                <div class="cheese"></div>
+                <div class="patty"></div>
+                <div class="bun-bottom"></div>
+            </div>
+            <div class="loading-text">Préparation en cours...</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <span class="logo-text">Fast<span class="highlight">Burger</span></span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#concept" class="nav-link">Notre Concept</a></li>
+                <li><a href="#localisation" class="nav-link">Nous Trouver</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="reservation-btn">
+            <a href="#reservation" class="btn-primary">Commander</a>
+        </div>
+        <div class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">L'art du <span class="highlight">Fast-Food</span> réinventé</h1>
+                <p class="hero-subtitle">Des burgers d'exception, préparés à la minute avec des produits locaux</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn-primary">Découvrir notre menu</a>
+                    <a href="#reservation" class="btn-secondary">Commander en ligne</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="plate">
+                    <div class="burger-hero">
+                        <div class="ingredient ing-1" data-speed="0.5"></div>
+                        <div class="ingredient ing-2" data-speed="0.8"></div>
+                        <div class="ingredient ing-3" data-speed="0.3"></div>
+                        <div class="ingredient ing-4" data-speed="0.7"></div>
+                        <div class="ingredient ing-5" data-speed="0.5"></div>
+                    </div>
+                </div>
+                <div class="parallax-bg"></div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="concept" class="concept">
+            <div class="section-header">
+                <h2>Notre <span class="highlight">Concept</span></h2>
+                <p>Fast-food ne rime pas avec malbouffe</p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-card" data-aos="fade-up">
+                    <div class="concept-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Produits Locaux</h3>
+                    <p>Nos ingrédients sont soigneusement sélectionnés auprès des producteurs de la région.</p>
+                </div>
+                <div class="concept-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="concept-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Fait Maison</h3>
+                    <p>Tout est préparé sur place, du pain aux sauces, pour une qualité inégalée.</p>
+                </div>
+                <div class="concept-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="concept-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Service Rapide</h3>
+                    <p>La qualité ne sacrifie pas l'efficacité. Votre commande est prête en un temps record.</p>
+                </div>
+                <div class="concept-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="concept-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Écologie</h3>
+                    <p>Emballages biodégradables et gestion responsable des déchets pour préserver la planète.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <div class="section-header">
+                <h2>Notre <span class="highlight">Menu</span></h2>
+                <p>Découvrez nos créations culinaires</p>
+            </div>
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="burgers">Burgers</button>
+                <button class="filter-btn" data-filter="sides">Accompagnements</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Boissons</button>
+            </div>
+            <div class="menu-container">
+                <div class="menu-item burgers" data-aos="fade-up">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Classic Burger">
+                        <div class="menu-badge">Best-seller</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Le Classic</h3>
+                        <p>Steak haché frais, cheddar, salade, tomate, oignon rouge, sauce maison</p>
+                        <div class="menu-price">9.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item burgers" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1575980652414-7e26a4f17f9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Gourmet Burger">
+                    </div>
+                    <div class="menu-info">
+                        <h3>L'Italien</h3>
+                        <p>Steak haché, mozzarella, tomates séchées, roquette, pesto, pain focaccia</p>
+                        <div class="menu-price">12.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item sides" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Sweet Potato Fries">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Frites Maison</h3>
+                        <p>Pommes de terre fraîches coupées à la main, cuites deux fois</p>
+                        <div class="menu-price">3.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item desserts" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Chocolate Brownie">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Brownie Chocolat</h3>
+                        <p>Chocolat noir, noix, servi avec une boule de glace vanille</p>
+                        <div class="menu-price">5.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item drinks" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Fresh Smoothie">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Smoothie Frais</h3>
+                        <p>Fruits frais de saison mixés minute, sans sucre ajouté</p>
+                        <div class="menu-price">4.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+                
+                <div class="menu-item burgers" data-aos="fade-up" data-aos-delay="500">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Veggie Burger">
+                        <div class="menu-badge">Végé</div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Le Végétarien</h3>
+                        <p>Galette de légumes maison, avocat, tomate, salade, sauce yaourt aux herbes</p>
+                        <div class="menu-price">10.90 €</div>
+                        <button class="add-to-cart">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-expand">
+                <button class="btn-secondary">Voir tout le menu</button>
+            </div>
+        </section>
+
+        <section id="reservation" class="reservation">
+            <div class="section-header">
+                <h2><span class="highlight">Commandez</span> en ligne</h2>
+                <p>Simple, rapide et savoureux</p>
+            </div>
+            <div class="reservation-container">
+                <div class="reservation-image">
+                    <div class="image-slider">
+                        <div class="slider-item active">
+                            <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Chef Preparing Food">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://images.unsplash.com/photo-1530554764233-e79e16c91d08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Happy Customers">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" data-tab="delivery">Livraison</button>
+                        <button class="tab-btn" data-tab="pickup">À emporter</button>
+                    </div>
+                    <div class="tab-content active" id="delivery">
+                        <form>
+                            <div class="form-group">
+                                <label for="address">Adresse de livraison</label>
+                                <input type="text" id="address" placeholder="Votre adresse complète" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Heure</label>
+                                    <select id="time" required>
+                                        <option value="">Choisir</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>13:00</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" placeholder="Pour vous contacter si besoin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Instructions spéciales</label>
+                                <textarea id="notes" placeholder="Allergies, préférences..."></textarea>
+                            </div>
+                            <div class="form-action">
+                                <button type="button" class="btn-primary">Valider ma commande</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-content" id="pickup">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickup-date">Date</label>
+                                    <input type="date" id="pickup-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickup-time">Heure</label>
+                                    <select id="pickup-time" required>
+                                        <option value="">Choisir</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>13:00</option>
+                                        <option>19:00</option>
+                                        <option>19:30</option>
+                                        <option>20:00</option>
+                                        <option>20:30</option>
+                                        <option>21:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickup-name">Nom</label>
+                                <input type="text" id="pickup-name" placeholder="Votre nom complet" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickup-phone">Téléphone</label>
+                                <input type="tel" id="pickup-phone" placeholder="Pour vous contacter si besoin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickup-notes">Instructions spéciales</label>
+                                <textarea id="pickup-notes" placeholder="Allergies, préférences..."></textarea>
+                            </div>
+                            <div class="form-action">
+                                <button type="button" class="btn-primary">Valider ma commande</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="localisation" class="location">
+            <div class="section-header">
+                <h2>Nous <span class="highlight">Trouver</span></h2>
+                <p>Au cœur de Massy, facilement accessible</p>
+            </div>
+            <div class="location-container">
+                <div class="map-container">
+                    <div id="map" class="map">
+                        <!-- Map will be loaded here with JavaScript -->
+                        <div class="map-placeholder">
+                            <img src="https://maps.googleapis.com/maps/api/staticmap?center=Massy,France&zoom=15&size=600x400&markers=color:red%7CMassy,France&key=YOUR_API_KEY" alt="Map of FastBurger Massy">
+                        </div>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <div class="info-card" data-aos="fade-left">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Adresse</h3>
+                            <p>123 Avenue des Gourmets<br>91300 Massy, France</p>
+                        </div>
+                    </div>
+                    <div class="info-card" data-aos="fade-left" data-aos-delay="100">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Horaires</h3>
+                            <p>Lundi - Jeudi: 11h30 - 14h30 | 19h - 22h<br>
+                            Vendredi - Samedi: 11h30 - 15h | 19h - 23h<br>
+                            Dimanche: 11h30 - 15h</p>
+                        </div>
+                    </div>
+                    <div class="info-card" data-aos="fade-left" data-aos-delay="200">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Contact</h3>
+                            <p>Téléphone: 01 23 45 67 89<br>
+                            Email: contact@fastburger-massy.fr</p>
+                        </div>
+                    </div>
+                    <div class="info-card" data-aos="fade-left" data-aos-delay="300">
+                        <div class="info-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Accès</h3>
+                            <p>Parking gratuit<br>
+                            RER B: Station Massy-Palaiseau (5 min à pied)<br>
+                            Bus: Lignes 119, 196, 197 (arrêt Centre Commercial)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="section-header">
+                <h2>Ce que nos clients <span class="highlight">disent</span></h2>
+                <p>Des expériences authentiques partagées</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Les meilleurs burgers que j'ai jamais goûtés ! Les ingrédients sont frais et le service est rapide. Je recommande vivement le Classic, un régal absolu !</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sophie Martin">
+                        <div class="author-info">
+                            <h4>Sophie Martin</h4>
+                            <p>Cliente régulière</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Enfin un fast-food qui propose des options végétariennes savoureuses ! Le burger végétarien est délicieux et les smoothies sont faits avec des fruits frais. Bravo !</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas Dubois">
+                        <div class="author-info">
+                            <h4>Thomas Dubois</h4>
+                            <p>Végétarien convaincu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>La commande en ligne est super pratique et la livraison toujours ponctuelle. Les burgers arrivent encore chauds et délicieux. Le service client est également très réactif !</p>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Camille Leroy">
+                        <div class="author-info">
+                            <h4>Camille Leroy</h4>
+                            <p>Cliente fidèle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="section-header">
+                <h2>Restons en <span class="highlight">Contact</span></h2>
+                <p>Nous sommes à votre écoute</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form" data-aos="fade-right">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nom</label>
+                                <input type="text" id="contact-name" placeholder="Votre nom complet" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" placeholder="Votre adresse email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet</label>
+                            <select id="contact-subject" required>
+                                <option value="">Sélectionner</option>
+                                <option>Informations générales</option>
+                                <option>Réservation de groupe</option>
+                                <option>Problème de commande</option>
+                                <option>Suggestion</option>
+                                <option>Opportunité d'emploi</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <div class="form-action">
+                            <button type="button" class="btn-primary">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="social-media">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Inscrivez-vous pour recevoir nos offres exclusives</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                    <div class="app-download">
+                        <h3>Notre application</h3>
+                        <p>Commandez encore plus rapidement</p>
+                        <div class="app-buttons">
+                            <a href="#" class="app-button">
+                                <i class="fab fa-apple"></i>
+                                <span>App Store</span>
+                            </a>
+                            <a href="#" class="app-button">
+                                <i class="fab fa-google-play"></i>
+                                <span>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Votre Commande</h3>
+                <button class="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Votre panier est vide</p>
+                </div>
+            </div>
+            <div class="cart-total">
+                <div class="total-row">
+                    <span>Sous-total</span>
+                    <span class="price">0.00 €</span>
+                </div>
+                <div class="total-row">
+                    <span>Livraison</span>
+                    <span class="price">0.00 €</span>
+                </div>
+                <div class="total-row total">
+                    <span>Total</span>
+                    <span class="price">0.00 €</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn-primary checkout-btn">Commander</button>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="logo-text">Fast<span class="highlight">Burger</span></span>
+                </div>
+                <p>L'art du fast-food réinventé à Massy.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#menu">Nos Burgers</a></li>
+                        <li><a href="#menu">Accompagnements</a></li>
+                        <li><a href="#menu">Desserts</a></li>
+                        <li><a href="#menu">Boissons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>À propos</h4>
+                    <ul>
+                        <li><a href="#concept">Notre Concept</a></li>
+                        <li><a href="#localisation">Localisation</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Franchise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">CGV</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2025 FastBurger Massy. Tous droits réservés.</p>
+            </div>
+            <div class="payment-methods">
+                <span>Modes de paiement acceptés</span>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#accueil" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Durand | Photographe Orsay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Curseur personnalisé -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    
+    <!-- Écran de chargement -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="shutter">
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+                <div class="shutter-blade"></div>
+            </div>
+            <span class="loader-text">Développement<span class="loader-dots"><span>.</span><span>.</span><span>.</span></span></span>
+        </div>
+    </div>
+
+    <!-- Navigation latérale avec texte vertical -->
+    <nav class="side-nav">
+        <div class="nav-handle">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-content">
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-text="Accueil">Accueil</a></li>
+                <li><a href="#portfolio" class="nav-link" data-text="Portfolio">Portfolio</a></li>
+                <li><a href="#about" class="nav-link" data-text="À propos">À propos</a></li>
+                <li><a href="#services" class="nav-link" data-text="Services">Services</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+        <!-- Section d'accueil avec parallaxe -->
+        <section id="home" class="home-section">
+            <div class="logo-container">
+                <h1 class="logo">Thomas <span>Durand</span></h1>
+                <div class="logo-subtitle">Photographe • Orsay</div>
+            </div>
+            
+            <div class="showcase-slider">
+                <div class="slider-track">
+                    <div class="slide active" data-info="Mariages">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80')"></div>
+                        <div class="slide-content">
+                            <h2 class="slide-title">Immortalisez<br>vos moments<br>précieux</h2>
+                            <a href="#portfolio" class="slide-cta">Découvrir</a>
+                        </div>
+                    </div>
+                    <div class="slide" data-info="Portraits">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1581704906775-891dd5207444?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80')"></div>
+                        <div class="slide-content">
+                            <h2 class="slide-title">Révélez<br>votre<br>personnalité</h2>
+                            <a href="#portfolio" class="slide-cta">Découvrir</a>
+                        </div>
+                    </div>
+                    <div class="slide" data-info="Événements">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')"></div>
+                        <div class="slide-content">
+                            <h2 class="slide-title">Capturez<br>l'émotion de<br>l'instant</h2>
+                            <a href="#portfolio" class="slide-cta">Découvrir</a>
+                        </div>
+                    </div>
+                    <div class="slide" data-info="Nature">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80')"></div>
+                        <div class="slide-content">
+                            <h2 class="slide-title">Explorez<br>la beauté<br>naturelle</h2>
+                            <a href="#portfolio" class="slide-cta">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-pagination">
+                    <span class="pagination-dot active" data-slide="0"></span>
+                    <span class="pagination-dot" data-slide="1"></span>
+                    <span class="pagination-dot" data-slide="2"></span>
+                    <span class="pagination-dot" data-slide="3"></span>
+                </div>
+                
+                <div class="slider-navigation">
+                    <button class="slider-btn prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-counter">
+                        <span class="current">01</span>
+                        <span class="separator">/</span>
+                        <span class="total">04</span>
+                    </div>
+                    <button class="slider-btn next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="slide-info"></div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>Défiler</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Section Portfolio -->
+        <section id="portfolio" class="portfolio-section">
+            <header class="section-header">
+                <span class="section-subtitle">Mon travail</span>
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-description">Explorez ma sélection d'œuvres photographiques à travers différentes catégories</p>
+            </header>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="wedding">Mariages</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="event">Événements</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+            </div>
+            
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                <button class="view-btn" data-view="masonry"><i class="fas fa-th-large"></i></button>
+                <button class="view-btn" data-view="carousel"><i class="fas fa-images"></i></button>
+            </div>
+            
+            <div class="gallery-container" data-view="grid">
+                <div class="gallery-item" data-category="wedding">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Mariage couple">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Premier regard</h3>
+                        <span>Mariage • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1568928483036-c4a87d92034d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Portrait femme">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Intensité</h3>
+                        <span>Portrait • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80" alt="Paysage montagne">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Aurore alpine</h3>
+                        <span>Nature • 2022</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="event">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Concert">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Vibrations nocturnes</h3>
+                        <span>Événement • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Portrait femme urbain">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Urban chic</h3>
+                        <span>Portrait • 2022</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="wedding">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Préparatifs mariage">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Préparation</h3>
+                        <span>Mariage • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1565118531796-763e5082d113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Paysage marin">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Horizon infini</h3>
+                        <span>Nature • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="event">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Gala">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Soirée prestigieuse</h3>
+                        <span>Événement • 2022</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="portrait">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Portrait femme souriant">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Luminosité</h3>
+                        <span>Portrait • 2023</span>
+                        <button class="gallery-expand" aria-label="Agrandir"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="load-more-btn">Voir plus</button>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="about" class="about-section">
+            <div class="about-layout">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Thomas Durand Photographe">
+                        <div class="image-parallax" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80')"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">10</span>
+                        <span class="label">ans d'expérience</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <span class="section-subtitle">Qui suis-je</span>
+                    <h2 class="section-title">À propos</h2>
+                    
+                    <div class="about-text">
+                        <p>Photographe passionné basé à Orsay, je capture des moments authentiques et émotionnels depuis plus de 10 ans. Mon approche combine technique précise et sensibilité artistique pour créer des images qui racontent votre histoire.</p>
+                        <p>Spécialisé dans la photographie de mariage, portrait et événementielle, je m'adapte à vos besoins pour créer des souvenirs uniques qui vous ressemblent. Chaque projet est une nouvelle aventure humaine et créative.</p>
+                        
+                        <blockquote>
+                            "La photographie est l'art de figer l'émotion pour l'éternité."
+                        </blockquote>
+                        
+                        <p>Mon parcours m'a amené à collaborer avec des particuliers comme avec des entreprises, toujours avec le même objectif : saisir l'essence de chaque instant pour le transformer en souvenir impérissable.</p>
+                    </div>
+                    
+                    <div class="about-signature">
+                        <img src="signature.png" alt="Signature Thomas Durand" class="signature">
+                        <div class="signature-name">Thomas Durand</div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="250">0</span>
+                            <span class="stat-label">Mariages capturés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="120">0</span>
+                            <span class="stat-label">Événements</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="500">0</span>
+                            <span class="stat-label">Clients satisfaits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <header class="testimonials-header">
+                    <span class="section-subtitle">Ce qu'ils en disent</span>
+                    <h3>Témoignages</h3>
+                </header>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonials-track">
+                        <div class="testimonial-item active">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>Thomas a su capturer l'essence même de notre mariage avec une sensibilité rare. Chaque photo raconte notre histoire d'une manière unique et authentique. Un talent exceptionnel !</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Sophie et Julien">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Sophie et Julien</h4>
+                                        <span>Mariage, juin 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>Une séance photo portrait qui a dépassé toutes mes attentes. Thomas crée une ambiance détendue qui permet de se sentir à l'aise devant l'objectif. Le résultat est simplement époustouflant !</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Mathieu Laurent">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Mathieu Laurent</h4>
+                                        <span>Séance portrait, mars 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p>Nous avons fait appel à Thomas pour notre événement d'entreprise et le résultat est impressionnant. Il a su être discret tout en captant parfaitement l'ambiance et les moments clés de la soirée.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Camille Dumont">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Camille Dumont</h4>
+                                        <span>Événement d'entreprise, décembre 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-controls">
+                        <button class="testimonial-btn prev" aria-label="Témoignage précédent"><i class="fas fa-chevron-left"></i></button>
+                        <div class="testimonial-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="testimonial-btn next" aria-label="Témoignage suivant"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section id="services" class="services-section">
+            <header class="section-header">
+                <span class="section-subtitle">Mes prestations</span>
+                <h2 class="section-title">Services</h2>
+                <p class="section-description">Des prestations sur mesure adaptées à vos besoins et à vos envies</p>
+            </header>
+            
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="service-title">Mariage</h3>
+                    <p class="service-description">Je vous accompagne tout au long de votre journée pour immortaliser chaque moment précieux, des préparatifs jusqu'à la soirée dansante.</p>
+                    <ul class="service-features">
+                        <li>Rencontre préalable pour définir vos attentes</li>
+                        <li>Couverture complète de l'événement</li>
+                        <li>Retouches professionnelles</li>
+                        <li>Galerie en ligne privée</li>
+                        <li>Album photo premium en option</li>
+                    </ul>
+                    <div class="service-price">À partir de 1200€</div>
+                    <a href="#contact" class="service-cta">Demander un devis</a>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="service-title">Portrait</h3>
+                    <p class="service-description">Séances personnalisées pour révéler votre personnalité à travers des portraits authentiques, en studio ou en extérieur.</p>
+                    <ul class="service-features">
+                        <li>Conseil sur le style et les tenues</li>
+                        <li>Séance d'1 à 2 heures</li>
+                        <li>Plusieurs changements de tenue</li>
+                        <li>10 photos retouchées au choix</li>
+                        <li>Tirages fine art en option</li>
+                    </ul>
+                    <div class="service-price">À partir de 250€</div>
+                    <a href="#contact" class="service-cta">Demander un devis</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="service-title">Événements</h3>
+                    <p class="service-description">Photographie professionnelle pour vos événements d'entreprise, soirées, conférences ou lancements de produits.</p>
+                    <ul class="service-features">
+                        <li>Briefing préalable sur les moments clés</li>
+                        <li>Couverture adaptée à votre planning</li>
+                        <li>Photos livrées sous 48h</li>
+                        <li>Format adapté aux réseaux sociaux</li>
+                        <li>Facturation à l'heure ou au forfait</li>
+                    </ul>
+                    <div class="service-price">À partir de 600€</div>
+                    <a href="#contact" class="service-cta">Demander un devis</a>
+                </div>
+            </div>
+            
+            <div class="process-timeline">
+                <h3 class="process-title">Mon processus</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Consultation</h4>
+                            <p>Première rencontre pour comprendre votre projet et vos attentes spécifiques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h4>Proposition</h4>
+                            <p>Élaboration d'une offre sur mesure adaptée à vos besoins et à votre budget.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h4>Shooting</h4>
+                            <p>Séance photo dans une ambiance détendue pour des résultats naturels et authentiques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <h4>Édition</h4>
+                            <p>Sélection et retouche minutieuse de chaque image pour un rendu parfait.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h4>Livraison</h4>
+                            <p>Remise de vos photos via une galerie en ligne privée et/ou supports physiques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact-section">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <span class="section-subtitle">Me contacter</span>
+                    <h2 class="section-title">Parlons de votre projet</h2>
+                    
+                    <p class="contact-intro">Vous avez un projet en tête ou une question? N'hésitez pas à me contacter. Je vous répondrai dans les plus brefs délais.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Studio</h3>
+                                <p>12 rue des Arts<br>91400 Orsay, France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>contact@thomasdurand.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Téléphone</h3>
+                                <p>+33 6 12 34 56 78</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Suivez-moi</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3>Demande de devis</h3>
+                        <p>Complétez le formulaire ci-dessous pour recevoir une proposition personnalisée</p>
+                    </div>
+                    
+                    <form id="quote-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="wedding">Mariage</option>
+                                    <option value="portrait">Portrait</option>
+                                    <option value="event">Événement</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Date de l'événement</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Votre projet</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Envoyer</span>
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="form-success">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Message envoyé !</h3>
+                        <p>Merci pour votre demande. Je vous recontacterai très rapidement.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-overlay">
+                    <div class="overlay-content">
+                        <h3>Visitez mon studio</h3>
+                        <p>12 rue des Arts, 91400 Orsay</p>
+                        <button class="map-btn">Voir sur la carte</button>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21041.082367777867!2d2.1780276!3d48.6997755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5d6026cc43417%3A0x40b82c3688c3990!2s91400%20Orsay!5e0!3m2!1sfr!2sfr!4v1682341234567!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Galerie -->
+        <div class="gallery-modal">
+            <button class="modal-close" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-content">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-info">
+                    <h3></h3>
+                    <span></span>
+                </div>
+            </div>
+            
+            <div class="modal-navigation">
+                <button class="modal-nav prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-nav next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2 class="footer-logo">Thomas <span>Durand</span></h2>
+                <p>Photographe professionnel à Orsay, spécialisé dans les mariages, portraits et événements.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Mariage</a></li>
+                        <li><a href="#services">Portrait</a></li>
+                        <li><a href="#services">Événements</a></li>
+                        <li><a href="#services">Entreprise</a></li>
+                        <li><a href="#services">Édition</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 12 rue des Arts, 91400 Orsay</li>
+                        <li><i class="fas fa-phone-alt"></i> +33 6 12 34 56 78</li>
+                        <li><i class="fas fa-envelope"></i> contact@thomasdurand.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir mes dernières actualités et offres spéciales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 Thomas Durand Photographie. Tous droits réservés.
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="scroll-top" aria-label="Revenir en haut">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
