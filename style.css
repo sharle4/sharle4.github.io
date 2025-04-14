@@ -263,6 +263,8 @@
   padding: 0.5rem 0;
   display: block;
   transition: var(--transition-h);
+  position: relative; /* Nécessaire pour le positionnement de ::after */
+  padding-bottom: 0.5rem; /* Espace pour le soulignement */
 }
 
 .nav-link:hover {
@@ -273,6 +275,32 @@
   color: var(--accent);
 }
 
+.nav-link::after { /* Style pour le soulignement au survol */
+  content: '';
+  position: absolute;
+  bottom: -0.5rem; /* Positionné en bas du padding */
+  left: 0;
+  width: 0; /* Commence caché */
+  height: 3px; /* Hauteur du soulignement */
+  background-color: var(--accent); /* Couleur du soulignement */
+  border-radius: 1.5px;
+  transition: width 0.3s ease-in-out; /* Animation sur la largeur */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* S'étend sur toute la largeur au survol */
+}
+
+/* Cachez cet effet sur mobile si le menu change d'apparence */
+@media (max-width: 991px) {
+    .nav-link::after {
+        display: none; /* Pas de soulignement sur le menu mobile */
+    }
+    .nav-link {
+        padding-bottom: 0; /* Réinitialise le padding si besoin */
+    }
+}
+
 .active-indicator {
   position: absolute;
   bottom: -0.5rem;
@@ -280,6 +308,7 @@
   background-color: var(--accent);
   border-radius: 1.5px;
   transition: 0.3s ease-in-out;
+  bottom: -0.5rem;
 }
 
 /* Hamburger Menu Button */
