@@ -219,7 +219,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -256,7 +256,7 @@
 }
 
 .nav-link {
-  color: var(--primary);
+  color: var(--text);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
@@ -427,6 +427,10 @@
     position: relative;
     overflow: hidden;
     display: flex;
+    align-items: center;      /* Centre le contenu verticalement */
+    justify-content: flex-start; /* Aligne le contenu à gauche */
+    padding-left: 5%;         /* Marge à gauche (ajustez si besoin) */
+    padding-right: 5%;        /* Optionnel: Marge à droite */
   }
 
   .hero-bg {
@@ -450,10 +454,12 @@
 
   .hero-content {
     max-width: 700px;
-    padding-right: 2rem;
     text-align: left;
     position: relative;
     z-index: 1;
+    margin-left: 0;      /* Force la marge gauche à 0 */
+    margin-right: auto;  /* Pousse l'élément vers la gauche en prenant l'espace restant à droite */
+    padding-right: 0;    /* Assurez-vous que ce padding est supprimé ou à 0 */
   }
 
   .hero h1 {
@@ -549,6 +555,7 @@
       border: 2px solid var(--text);
       border-radius: 20px;
       position: relative;
+      margin-top: 1rem;
   }
 
   .mouse::before {
