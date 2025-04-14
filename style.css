@@ -370,7 +370,7 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(135deg, rgba(11, 31, 58, 0.1) 0%, rgba(217, 119, 6, 0.08) 100%);
+    background-color: var(--white);
   }
 
   .hero-particles {
@@ -382,8 +382,9 @@
     z-index: -1;
   }
 
-  .hero-content-wrapper {
+  .hero-content {
     max-width: 700px;
+    padding-right: 2rem;
     text-align: left;
     position: relative;
     z-index: 1;
@@ -418,7 +419,7 @@
     font-size: 1.4rem;
     color: var(--text);
     max-width: 700px;
-    margin: 1rem auto 2.5rem;
+    margin: 1rem 0 2.5rem 0;
   }
   
   /* CTA BUTTON */
