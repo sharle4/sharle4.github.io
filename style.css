@@ -187,6 +187,18 @@
   text-decoration: none;
 }
 
+.logo::before {
+  content: "<";
+  color: var(--accent);
+  margin-right: 2px;
+}
+
+.logo::after {
+  content: "/>";
+  color: var(--accent);
+  margin-left: 2px;
+}
+
 /* Navigation Menu */
 .nav-menu {
   flex: 1;
