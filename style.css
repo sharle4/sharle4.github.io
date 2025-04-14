@@ -20,6 +20,26 @@
     scroll-behavior: smooth;
   }
   
+  /* SCROLL SNAP */
+  html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+
+  #hero,
+  #about,
+  #services,
+  #portfolio,
+  #testimonial,
+  #pricing,
+  #contact,
+  footer {
+      scroll-snap-align: start;
+      scroll-margin-top: 1px;
+  }
+
+
+
   body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg);
@@ -36,8 +56,36 @@
   /* CONTAINERS */
   section, header, footer {
     width: 100%;
-    padding: 3rem 5vw;
     max-width: none;
+  }
+
+  #hero,
+  #about,
+  #services,
+  #portfolio,
+  #testimonial,
+  #pricing,
+  #contact {
+      min-height: 100vh; 
+      height: auto;
+      display: flex;          
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 65px;
+      padding-bottom: 40px;
+  }
+
+  #hero .container,
+  #about .container,
+  #services .container,
+  #portfolio .container,
+  #testimonial .container,
+  #pricing .container,
+  #contact .container {
+      width: 100%;
+      max-width: 1400px;
+      /* margin: 0 auto;*/
   }
   
   #about, #portfolio, #pricing {
