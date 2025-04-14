@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -26,6 +27,7 @@ body {
     background-color: var(--color-light);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Typographie */
