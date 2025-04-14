@@ -155,4 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Met à jour l'état actif au cas où les positions changent
     updateActiveState();
   });
+
+  // Initialisations des bibliothèques
+  if (typeof AOS !== 'undefined') { // Vérifie si AOS est chargé
+    AOS.init();
+  }
+  if (typeof Rellax !== 'undefined' && document.querySelector('.parallax')) { // Vérifie Rellax et l'élément
+      var rellax = new Rellax('.parallax');
+  }
 });

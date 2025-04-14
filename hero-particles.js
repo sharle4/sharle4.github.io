@@ -8,7 +8,7 @@ particlesJS('hero-particles', {
                     }
                 },
                 "color": {
-                    "value": "#3a0ca3"
+                    "value": "#d97706"
                 },
                 "shape": {
                     "type": "circle",
@@ -43,7 +43,7 @@ particlesJS('hero-particles', {
                 "line_linked": {
                     "enable": true,
                     "distance": 150,
-                    "color": "#3a0ca3",
+                    "color": "#1a1a1a",
                     "opacity": 0.4,
                     "width": 1
                 },
