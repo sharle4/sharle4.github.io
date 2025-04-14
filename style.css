@@ -823,6 +823,98 @@
     color: var(--muted, #888);
   }
 
+  /* Styles pour la Modale Portfolio */
+#portfolio-modal .modal-content {
+  width: 95%;           /* Plus large pour voir le site */
+  max-width: 1600px;    /* Limite maximale */
+  height: 90vh;         /* Prend 90% de la hauteur de la vue */
+  padding: 10px;        /* Réduire le padding pour maximiser l'iframe */
+  display: flex;        /* Utiliser flex pour mieux gérer le contenu */
+  flex-direction: column;
+}
+
+#portfolio-modal .modal-body {
+  flex-grow: 1;         /* Le corps prend toute la hauteur restante */
+  padding: 0;           /* Pas de padding interne pour le corps */
+  position: relative;   /* Pour positionner l'indicateur de chargement */
+  overflow: hidden;     /* Cache le contenu qui déborderait */
+  border-radius: var(--radius); /* Appliquer le radius ici */
+}
+
+#portfolio-modal iframe {
+  display: block;       /* Assure qu'il n'y a pas d'espace en dessous */
+  width: 100%;
+  height: 100%;
+  border: none;         /* Redondant mais sûr */
+  border-radius: var(--radius); /* Conserver les coins arrondis */
+}
+
+/* Styles pour le bouton loupe (si besoin d'ajustement) */
+.portfolio-action-btn {
+  /* Réutiliser les styles de .portfolio-hover a si possible */
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  text-align: center;
+  line-height: 50px; /* Centrage vertical de l'icône */
+  color: var(--primary);
+  font-size: 1.2rem;
+  border: none; /* Important pour un <button> */
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0; /* Reset padding pour un bouton */
+}
+
+.portfolio-action-btn:hover {
+  background-color: var(--accent);
+  color: var(--white);
+   transform: scale(1.1); /* Petit effet au survol */
+}
+
+/* Styles pour l'indicateur de chargement de l'iframe */
+.iframe-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 5; /* Au-dessus de l'iframe pendant le chargement */
+  display: none; /* Caché par défaut */
+  font-style: italic;
+  color: var(--text);
+}
+
+#portfolio-modal .modal-body.loading .iframe-loading {
+    display: block; /* Afficher pendant le chargement */
+}
+#portfolio-modal .modal-body.loading iframe {
+    opacity: 0.3; /* Optionnel: Rendre l'iframe transparent pendant le chargement */
+}
+
+/* Ajustement de la position du bouton de fermeture */
+ #portfolio-modal .modal-close {
+    top: 15px; /* Légèrement ajusté à cause du padding réduit */
+    right: 15px;
+    z-index: 10; /* S'assurer qu'il est au-dessus de l'iframe */
+    background: rgba(0,0,0,0.1); /* Léger fond pour visibilité */
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+ }
+  #portfolio-modal .modal-close:hover {
+     background: rgba(0,0,0,0.4);
+  }
+
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .hero h1 {

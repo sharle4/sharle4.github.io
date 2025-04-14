@@ -131,7 +131,12 @@
                 <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8d2Vic2l0ZSxkZXNpZ258fHx8fHwxNjM2NTQ2NzAw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="Projet E-commerce">
                 <div class="portfolio-hover">
                     <a href="#"><i class="fas fa-link"></i></a>
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <button class="open-portfolio-popup portfolio-action-btn"
+                            data-popup-target="#portfolio-modal"
+                            data-content-url="portfolio/coiffeur/index.html"
+                            aria-label="Aperçu du site Coiffeur">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
             <div class="portfolio-info">
@@ -148,7 +153,12 @@
                 <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBwLG1vYmlsZXx8fHx8fDE2MzY1NDY3NTA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="Application Mobile">
                 <div class="portfolio-hover">
                     <a href="#"><i class="fas fa-link"></i></a>
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <button class="open-portfolio-popup portfolio-action-btn"
+                            data-popup-target="#portfolio-modal"
+                            data-content-url="portfolio/restaurant/index.html"
+                            aria-label="Aperçu du site Restaurant">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
             <div class="portfolio-info">
@@ -165,7 +175,12 @@
                 <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8dWksdXgsdWlkZXNpZ258fHx8fHwxNjM2NTQ2Nzc1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="UI/UX Design">
                 <div class="portfolio-hover">
                     <a href="#"><i class="fas fa-link"></i></a>
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <button class="open-portfolio-popup portfolio-action-btn"
+                            data-popup-target="#portfolio-modal"
+                            data-content-url="portfolio/photographe/index.html"
+                            aria-label="Aperçu du site Photographe">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
             <div class="portfolio-info">
@@ -180,6 +195,16 @@
       </div>
     </div>
   </section>
+
+  <!-- Popup Portfolio -->
+  <div class="modal" id="portfolio-modal">
+    <div class="modal-content modal-portfolio-content"> <span class="modal-close" id="close-portfolio-popup">&times;</span>
+      <div class="modal-body modal-portfolio-body">
+        <iframe src="about:blank" frameborder="0" style="width: 100%; height: 100%; border: none;" title="Aperçu du projet"></iframe>
+        <p class="loading-indicator iframe-loading">Chargement du site...</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Témoignages -->
   <section id="testimonial" class="testimonial" class="section">
@@ -306,134 +331,7 @@
   
 
   <!-- Popup Mentions légales -->
-  <script>
-    // --- Script pour les Modales Légales avec Chargement Dynamique ---
-    document.addEventListener('DOMContentLoaded', () => { // Attend que le DOM soit prêt
-
-      // Sélection des éléments Modales et Boutons de fermeture
-      const legalModal = document.getElementById('legal-modal');
-      const privacyModal = document.getElementById('privacy-modal');
-      const closeLegalBtn = document.getElementById('close-legal-popup');
-      const closePrivacyBtn = document.getElementById('close-privacy-popup');
-
-      // Sélection des liens d'ouverture
-      const openLegalLink = document.getElementById('open-legal-popup');
-      const openPrivacyLink = document.getElementById('open-privacy-popup');
-
-      // Conteneurs pour le contenu chargé
-      const legalModalBody = legalModal ? legalModal.querySelector('.modal-body') : null;
-      const privacyModalBody = privacyModal ? privacyModal.querySelector('.modal-body') : null;
-
-      // États pour savoir si le contenu a été chargé (évite re-fetch)
-      let legalContentLoaded = false;
-      let privacyContentLoaded = false;
-
-      // Fonction pour charger le contenu via Fetch
-      async function loadModalContent(modalBody, url) {
-          if (!modalBody) return false; // Sécurité
-
-          // Afficher indicateur de chargement (même si déjà affiché initialement)
-          modalBody.innerHTML = '<p class="loading-indicator">Chargement...</p>';
-
-          try {
-              const response = await fetch(url);
-              if (!response.ok) {
-                  // Gérer les erreurs HTTP (ex: 404 Fichier non trouvé)
-                  throw new Error(`Erreur HTTP ${response.status} lors du chargement de ${url}`);
-              }
-              const content = await response.text();
-              modalBody.innerHTML = content; // Injecter le contenu HTML
-              return true; // Succès
-          } catch (error) {
-              console.error("Erreur lors du chargement du contenu de la modale:", error);
-              modalBody.innerHTML = `<p class="loading-indicator" style="color: red;">Impossible de charger le contenu. Veuillez réessayer plus tard.</p><p style="font-size:0.8em; color:#666;">Détail: ${error.message}</p>`;
-              return false; // Échec
-          }
-      }
-
-      // Fonction pour ouvrir une modale
-      async function openModal(modal, modalBody, contentUrl, contentLoadedFlag) {
-        if (!modal || !modalBody) return;
-
-          // Charger le contenu seulement si pas déjà chargé
-          if (!contentLoadedFlag) {
-              const success = await loadModalContent(modalBody, contentUrl);
-              if (success) {
-                  // Mettre à jour le flag correspondant pour éviter de recharger
-                  if (modal.id === 'legal-modal') legalContentLoaded = true;
-                  if (modal.id === 'privacy-modal') privacyContentLoaded = true;
-              } else {
-                // Option: Ne pas ouvrir la modale si le contenu n'a pu être chargé ?
-                // Ici, on l'ouvre quand même pour afficher le message d'erreur.
-              }
-          }
-
-        // Ouvrir la modale (visuellement)
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Bloquer le scroll du body
-      }
-
-      // Fonction pour fermer une modale (inchangée)
-      function closeModal(modal) {
-        if (modal && modal.classList.contains('active')) { // Vérifier si la modale est active
-          modal.classList.remove('active');
-          document.body.style.overflow = ''; // Rétablir le scroll du body
-        }
-      }
-
-      // --- Écouteurs d'événements ---
-
-      // Ouverture Mentions Légales
-      if (openLegalLink && legalModal && legalModalBody) {
-          openLegalLink.addEventListener('click', (e) => {
-              e.preventDefault(); // Empêche de suivre le href="legal.html"
-              const url = openLegalLink.getAttribute('data-content-url');
-              if (url) {
-                  openModal(legalModal, legalModalBody, url, legalContentLoaded);
-              } else {
-                  console.error("URL de contenu manquante pour les mentions légales.");
-              }
-          });
-      }
-
-      // Ouverture Politique de Confidentialité
-      if (openPrivacyLink && privacyModal && privacyModalBody) {
-          openPrivacyLink.addEventListener('click', (e) => {
-              e.preventDefault(); // Empêche de suivre le href="privacy.html"
-              const url = openPrivacyLink.getAttribute('data-content-url');
-              if (url) {
-                  openModal(privacyModal, privacyModalBody, url, privacyContentLoaded);
-              } else {
-                  console.error("URL de contenu manquante pour la politique de confidentialité.");
-              }
-          });
-      }
-
-      // Fermeture avec le bouton croix
-      if (closeLegalBtn) {
-        closeLegalBtn.addEventListener('click', () => closeModal(legalModal));
-      }
-      if (closePrivacyBtn) {
-        closePrivacyBtn.addEventListener('click', () => closeModal(privacyModal));
-      }
-
-      // Fermeture en cliquant en dehors de la modale
-      window.addEventListener('click', (event) => {
-        if (event.target === legalModal) closeModal(legalModal);
-        if (event.target === privacyModal) closeModal(privacyModal);
-      });
-
-      // Fermeture avec la touche Échap
-      window.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-          closeModal(legalModal); // Tente de fermer les deux
-          closeModal(privacyModal);
-        }
-      });
-
-    }); // Fin de DOMContentLoaded
-    // --- Fin du Script Modales ---
-  </script>
+  <script src="modal.js"></script>
   <script src="header.js"></script>
   <script src="portfolio.js"></script>
 </body>
