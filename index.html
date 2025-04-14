@@ -35,7 +35,7 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-        <a href="#" class="logo">Charles.dev</a>
+        <a href="#" class="logo">&lt;Charles.dev/&gt;</a>
       
       <button class="hamburger" id="hamburger">
         <span></span>
@@ -116,44 +116,68 @@
   </section>
 
   <!-- Réalisations -->
-  <section id="portfolio" class="portfolio" class="section">
+  <section class="section" id="portfolio">
     <div class="container" data-aos="fade-up">
-      <h2>Quelques exemples de réalisations</h2>
-
-        <div class="portfolio-card">
-          <div class="portfolio-content">
-            <div class="portfolio-icon">
-              <i class="fa-solid fa-scissors"></i>
+    <h2>Quelques exemples de créations</h2>
+    <!-- <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="web">Sites Web</button>
+        <button class="filter-btn" data-filter="app">Applications</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+    </div> -->
+    <div class="portfolio-container">
+        <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8d2Vic2l0ZSxkZXNpZ258fHx8fHwxNjM2NTQ2NzAw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="Projet E-commerce">
+                <div class="portfolio-hover">
+                    <a href="#"><i class="fas fa-link"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
             </div>
-            <div class="portfolio-text">
-              <p><strong>Coiffeur – Gif-sur-Yvette</strong><br><i>Objectif : </i>Moderniser l'image et faciliter la prise de RDV en ligne. Site vitrine responsive avec galerie photos et formulaire de rendez-vous.</p>
+            <div class="portfolio-info">
+                <h3>Coiffeur – Gif-sur-Yvette</h3>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">React.js</span>
+                    <span class="portfolio-tag">Node.js</span>
+                    <span class="portfolio-tag">MongoDB</span>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="portfolio-card">
-          <div class="portfolio-content">
-            <div class="portfolio-icon">
-              <i class="fa-solid fa-burger"></i>
+        <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBwLG1vYmlsZXx8fHx8fDE2MzY1NDY3NTA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="Application Mobile">
+                <div class="portfolio-hover">
+                    <a href="#"><i class="fas fa-link"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
             </div>
-            <div class="portfolio-text">
-              <p><strong>Restaurant – Massy</strong><br><i>Objectif : </i>Présenter le menu de façon attractive et augmenter les réservations. Site avec menu, carte interactive et module de réservation.</p>
+            <div class="portfolio-info">
+                <h3>Restaurant – Massy</h3>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">React Native</span>
+                    <span class="portfolio-tag">Firebase</span>
+                    <span class="portfolio-tag">API Maps</span>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="portfolio-card">
-          <div class="portfolio-content">
-            <div class="portfolio-icon">
-              <i class="fa-solid fa-camera"></i>
+        <div class="portfolio-item" data-category="web">
+            <div class="portfolio-img">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8dWksdXgsdWlkZXNpZ258fHx8fHwxNjM2NTQ2Nzc1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800" alt="UI/UX Design">
+                <div class="portfolio-hover">
+                    <a href="#"><i class="fas fa-link"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div>
             </div>
-            <div class="portfolio-text">
-              <p><strong>Photographe – Orsay</strong><br><i>Objectif : </i>Valoriser le travail artistique et générer des contacts qualifiés. Site portfolio avec galeries optimisées et formulaire de devis.</p>
+            <div class="portfolio-info">
+                <h3>Photographe – Orsay</h3>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Figma</span>
+                    <span class="portfolio-tag">UI/UX</span>
+                    <span class="portfolio-tag">Prototypage</span>
+                </div>
             </div>
-          </div>
         </div>
-
-      <p style="text-align: center; margin-top: 2rem;">Et si le prochain site vitrine, c'était le vôtre ?</p>
+      </div>
     </div>
   </section>
 
@@ -411,5 +435,6 @@
     // --- Fin du Script Modales ---
   </script>
   <script src="header.js"></script>
+  <script src="portfolio.js"></script>
 </body>
 </html>
