@@ -22,7 +22,6 @@
   
   /* SCROLL SNAP */
   html {
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
   }
 
