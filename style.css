@@ -10,7 +10,7 @@
     --radius: 8px;
     --transition: 0.3s ease;
     --transition-h: all 0.3s ease-in-out;
-  }
+}
   
   /* 🧹 RESET */
   * {
@@ -51,6 +51,43 @@
   body.menu-open {
     overflow: hidden;
   }
+
+  /* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px; /* Ajustez la taille */
+  height: 50px; /* Ajustez la taille */
+  background-color: var(--primary); /* Couleur principale */
+  color: var(--white); /* Couleur du texte/icône */
+  border: none;
+  border-radius: 50%; /* Rond */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem; /* Taille de l'icône */
+  z-index: 999; /* Au-dessus de la plupart des éléments */
+
+  /* Styles pour l'état caché */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* Petit effet de sortie */
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease, background-color 0.3s ease;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Effet d'entrée */
+}
+
+.back-to-top:hover {
+  background-color: var(--accent); /* Couleur au survol */
+  transform: translateY(-3px) scale(1.05); /* Effet au survol */
+}
 
   /* CONTAINERS */
   section, header, footer {
