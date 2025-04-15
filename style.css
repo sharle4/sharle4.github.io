@@ -20,11 +20,35 @@
     scroll-behavior: smooth;
   }
   
-  /* SCROLL SNAP */
+  /* SCROLL SNAP & SCROLLBAR*/
   html {
     overflow-y: scroll;
     scroll-padding-top: 64.59px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--bg);
   }
+
+  /* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
 
   #hero,
   #about,
