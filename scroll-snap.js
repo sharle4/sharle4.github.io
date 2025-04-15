@@ -20,7 +20,7 @@ function updateScrollSnapBehavior() {
 
     if (window.innerWidth >= desktopBreakpoint) {
         // Écran large (Desktop) -> Utiliser 'mandatory'
-        targetSnapType = 'y mandatory';
+        targetSnapType = 'y proximity';
         console.log(`Largeur >= ${desktopBreakpoint}px - Activation Snap: mandatory`);
     } else {
         // Écran petit (Mobile/Tablette) -> Utiliser 'proximity'

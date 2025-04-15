@@ -23,6 +23,7 @@
   /* SCROLL SNAP */
   html {
     overflow-y: scroll;
+    scroll-padding-top: 64.59px;
   }
 
   #hero,
@@ -108,7 +109,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 65px;
+      padding-top: 64.59px;
       padding-bottom: 40px;
   }
 
@@ -156,7 +157,6 @@
     position: relative;
     display: inline-block;
     opacity: 0;
-    transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
     --scroll-offset-x: 0px;
     transform: translateX(var(--scroll-offset-x)) translateY(20px);
